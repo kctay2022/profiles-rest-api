@@ -1,14 +1,22 @@
-# requirements.txt ???
-
 vagrant ssh
 cd /vagrant/
 python -m venv ~/env
 source ~/env/bin/activate
 vagrant$ deactivate
 
+#one-time install of python packages defined in requirements file.
+pip install -r requirements.txt
+
+# one-time setup of the django project
 django-admin.py startproject profiles_project .
 python manage.py startapp profiles_api
 
 # add to install apps in settings file
 
 python manage.py runserver 0.0.0.0:8000
+
+
+# standard imports for django DB
+from django.db import models
+from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import PermissionsMixin
