@@ -1,0 +1,15 @@
+# to init the local repo and push into remote repo
+# need some other command to init and use git remote
+git remote -v
+git push -u origin main
+
+# to sync code changes from local to git repo
+git add .
+git commit -am "configure Vagrant and setup hello world script"
+git push origin
+
+# to remove file from git repo
+git rm ubuntu-bionic-18.04-cloudimg-console.log
+git add .
+git commit -am "remove log file"
+git push origin
