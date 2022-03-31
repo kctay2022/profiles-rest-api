@@ -13,6 +13,7 @@ python manage.py startapp profiles_api
 
 # add to install apps in settings file
 
+# start the server. test that can load default page at http://127.0.0.1:8000
 python manage.py runserver 0.0.0.0:8000
 
 
@@ -20,3 +21,8 @@ python manage.py runserver 0.0.0.0:8000
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
+
+# one-time set up database, run the following at command line
+python manage.py makemigrations profiles_api
+python manage.py migrate
+python manage.py createsuperuser
