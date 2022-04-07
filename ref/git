@@ -1,3 +1,7 @@
+# config the git account
+git config --global user.email "tay.kok.chuan@gmail.com"
+git config --global user.password "secret"
+
 # to init the local repo and push into remote repo
 # need some other command to init and use git remote
 git remote -v
